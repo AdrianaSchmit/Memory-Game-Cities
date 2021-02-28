@@ -1,35 +1,49 @@
 const cards = document.querySelectorAll('.memory-card');
 
-let cardWasTurned = false;
+let wasCardTurned = false;
+let stopCards = false;
 let firstCard, secondCard;
 
-function turnCard() {
-  this.classList.toggle("turn");
+function flipCard() {
+  if (stopCards) return;
 
-  if (!cardWasTurned) {
-    cardWasTurned = true;
+  this.classList.add('turn');
+
+  if (!wasCardTurned) {
+    // first click
+    wasCardTurned = true;
     firstCard = this;
-      } else  {
-          cardWasTurned = false;
-    secondCard = this; 
- 
 
-      if (firstCard.dataset.framework === secondCard.dataset.framework) {
-     firstCard.removeEventListener('click', turnCard);
-  secondCard.removeEventListener('click', turnCard);
-      }else{
-          setTimeout(() => {
-    firstCard.classList.remove('turn');
-    secondCard.classList.remove('turn');
-
-    resetBoard();
-  }, 1500);
-      }
-
-
- 
-      }
+    return;
   }
 
+  // second click
+  wasCardTurned = false;
+  secondCard = this;
 
-cards.forEach(card => card.addEventListener('click', turnCard));
+  checkForMatch();
+}
+
+function checkForMatch() {
+  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+
+  isMatch ? disableCards() : unturnCards();
+}
+
+function disableCards() {
+  firstCard.removeEventListener('click', turnCards);
+  secondCard.removeEventListener('click', turnCards);
+}
+
+function unturnCards() {
+  stopCards = true;
+
+  setTimeout(() => {
+    firstCard.classList.remove('flip');
+    secondCard.classList.remove('flip');
+
+    stopCards = false;
+  }, 1500);
+}
+
+cards.forEach(card => card.addEventListener('click', turnCards));
