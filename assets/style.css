@@ -1,29 +1,65 @@
 
-#title{
-text-align: center;
-}
-
-
-.memory-game {
-  width: 640px;
-  height: 640px;
-  background: blue;
+#heroimage img{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: auto;
-  border-radius: 5px;
-  perspective: 1000px;
-
 }
+
+#button1{
+  background-color: red;
+  position: absolute;
+  display: inline-block;
+  font-size: 50px;
+  top: 30px;
+  left: 30px;
+}
+
+#button2 {
+  background-color: red;
+  position: absolute;
+  display: inline-block;
+  font-size: 50px;
+  top: 30px;
+  right: 30px;
+}
+
+#title{
+  text-align: center;
+}
+
+#background-image{
+  position: relative;
+  width: 100%;
+  height:100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: auto;
+}
+
+#container-game{
+  
+   margin-left: 300px;
+  width: 700px;
+  height: 600px;
+  perspective: 1000px;
+  position: absolute;
+  top: 0;
+}
+
 
 .memory-card {
-  width: 120px;
+  width:100px;
   height: 130px;
- position: relative;
+  position: relative;
   transform: scale(1);
-  padding-left: 130px;
-  padding-right: 80px;
+  margin: auto;
   transform-style: preserve-3d;
-   transition: transform .5s;
-  
+  transition: transform .5s;
+
+
 }
 
 .memory-card:active {
@@ -31,10 +67,9 @@ text-align: center;
   transition: transform .2s;
 }
 
-.memory-card.flip {
+.memory-card.turn {
   transform: rotateY(180deg);
 }
-
 
 .front-face,
 .back-face {
@@ -43,9 +78,40 @@ text-align: center;
   position: absolute;
   border-radius: 5px;
   backface-visibility: hidden;
- 
+  padding-top: 10px;
 }
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+
+/*_______________________________________________________media screem*/
+
+
+
+@media only screen and (max-width: 600px) {
+ 
+    #background-image{
+  width: 100%;
+  height: 100%;
+}
+
+    #container-game{
+ width: 80%;
+  margin: auto;
+  top: 0;
+  left: 20px; 
+}
+
+
+.memory-card {
+  width:60px;
+  height: 100px;
+
+}
+
+
+
+
 }
