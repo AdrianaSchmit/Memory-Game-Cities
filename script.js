@@ -4,8 +4,9 @@ let wasCardTurned = false;
 let stopCards = false;
 let firstCard, secondCard;
 
-function flipCard() {
+function turnCard() {
   if (stopCards) return;
+  if (this === firstCard) return;
 
   this.classList.add('turn');
 
@@ -18,7 +19,6 @@ function flipCard() {
   }
 
   // second click
-  wasCardTurned = false;
   secondCard = this;
 
   checkForMatch();
@@ -27,23 +27,37 @@ function flipCard() {
 function checkForMatch() {
   let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
 
-  isMatch ? disableCards() : unturnCards();
+  isMatch ? disableCards() : unturnCard();
 }
 
 function disableCards() {
-  firstCard.removeEventListener('click', turnCards);
-  secondCard.removeEventListener('click', turnCards);
+  firstCard.removeEventListener('click', turnCard);
+  secondCard.removeEventListener('click', turnCard);
+
+  resetBoard();
 }
 
-function unturnCards() {
+function unturnCard() {
   stopCards = true;
 
   setTimeout(() => {
-    firstCard.classList.remove('flip');
-    secondCard.classList.remove('flip');
+    firstCard.classList.remove('turn');
+    secondCard.classList.remove('turn');
 
-    stopCards = false;
+    resetBoard();
   }, 1500);
 }
 
-cards.forEach(card => card.addEventListener('click', turnCards));
+function resetBoard() {
+  [wasCardTurned, stopCards] = [false, false];
+  [firstCard, secondCard] = [null, null];
+}
+
+(function shuffle() {
+  cards.forEach(card => {
+    let randomPos = Math.floor(Math.random() * 12);
+    card.style.order = randomPos;
+  });
+})();
+
+cards.forEach(card => card.addEventListener('click', turnCard));
