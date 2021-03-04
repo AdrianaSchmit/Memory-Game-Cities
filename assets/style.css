@@ -1,3 +1,26 @@
+html {
+  height: 100%;
+  width: 100%;
+ 
+}
+
+
+body {
+  
+    background: url('/assets/images/panel.jpg');
+  background-size: cover;
+  background-repeat: repeat;
+  
+  width: 100%;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+
+ 
+}
+
+
 
 #heroimage img{
   position: relative;
@@ -90,7 +113,7 @@
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
  
     #background-image{
   width: 100%;
@@ -100,18 +123,60 @@
     #container-game{
  width: 80%;
   margin: auto;
-  top: 0;
-  left: 20px; 
+  left: 30px;
+  top: 60px;
+  
 }
 
 
 .memory-card {
   width:60px;
-  height: 100px;
+  height: 110px;
 
+}
+
+.front-face,
+.back-face {
+
+  padding-top: 20px;
 }
 
 
 
 
 }
+
+
+@media only screen and (max-width: 800px) {
+ 
+    #background-image{
+  width: 100%;
+  height: 100%;
+}
+
+    #container-game{
+ width: 80%;
+  margin: auto;
+  left: 50px;
+  top: 70px;
+  
+}
+
+
+.memory-card {
+  width:100px;
+  height: 150px;
+
+}
+
+.front-face,
+.back-face {
+
+  padding-top: 30px;
+}
+
+
+
+
+}
+
