@@ -1,310 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous" />
 
     <link rel="stylesheet" href="assets/style.css" />
 
     <title>Memory Game</title>
 
-    <style>
-      .timer {
-        text-align: center;
-        font-size: 40px;
-        margin-top: 0px;
-      }
-    </style>
-  </head>
 
-  <body>
+</head>
+
+<body>
     <section id="container-game">
-      <div class="container">
-        <h2 id="title">Memory Game</h2>
+        <div class="container">
+            <h2 id="title">MEMORY GAME CITIES</h2>
 
-        <p class="timer">
-          Time
+            <div id="images memory-game">
+                <div class="row">
+                    <div class="col-3 memory-card" data-framework="bangkok">
+                        <img class="front-face" src="assets/images/0.jpg" data-type="bangkok" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="bangkok" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="barcelona">
+                        <img class="front-face" src="assets/images/1.jpg" data-type="barcelona" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="barcelona" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="cairo">
+                        <img class="front-face" src="assets/images/2.jpg" data-type="cairo" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="cairo" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="berlin">
+                        <img class="front-face" src="assets/images/3.jpg" data-type="berlin" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="berlin" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 memory-card" data-framework="istanbul">
+                        <img class="front-face" src="assets/images/4.jpg" data-type="istanbul" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="istanbul" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="london">
+                        <img class="front-face" src="assets/images/5.jpg" data-type="london" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="london" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="rome">
+                        <img class="front-face" src="assets/images/6.jpg" data-type="rome" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="rome" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="rio">
+                        <img class="front-face" src="assets/images/7.jpg" data-type="rio" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="rio" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 memory-card" data-framework="bangkok">
+                        <img class="front-face" src="assets/images/8.jpg" data-type="bangkok" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="bangkok" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="barcelona">
+                        <img class="front-face" src="assets/images/9.jpg" data-type="barcelona" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="barcelona" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="cairo">
+                        <img class="front-face" src="assets/images/10.jpg" data-type="cairo" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="cairo" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="berlin">
+                        <img class="front-face" src="assets/images/11.jpg" data-type="berlin" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="berlin" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 memory-card" data-framework="istanbul">
+                        <img class="front-face" src="assets/images/12.jpg" data-type="istanbul" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="istanbul" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="london">
+                        <img class="front-face" src="assets/images/13.jpg" data-type="london" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="london" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="rio">
+                        <img class="front-face" src="assets/images/14.jpg" data-type="rio" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="rio" />
+                    </div>
+                    <div class="col-3 memory-card" data-framework="rome">
+                        <img class="front-face" src="assets/images/15.jpg" data-type="rome" />
+                        <img class="back-face" src="assets/images/back-for-flagcard3.jpg" data-type="rome" />
+                    </div>
+                </div>
 
-          <label id="minutes" class="timer">00</label>:<label
-            id="seconds"
-            class="timer"
-            >00</label
-          >
-        </p>
+                <p class="timer">
+                    Time
 
-        <div id="images memory-game">
-          <div class="row">
-            <div class="col-3 memory-card" data-framework="bangkok">
-              <img
-                class="front-face"
-                src="assets/images/0.jpg"
-                data-type="bangkok"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="bangkok"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="barcelona">
-              <img
-                class="front-face"
-                src="assets/images/1.jpg"
-                data-type="barcelona"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="barcelona"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="cairo">
-              <img
-                class="front-face"
-                src="assets/images/2.jpg"
-                data-type="cairo"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="cairo"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="berlin">
-              <img
-                class="front-face"
-                src="assets/images/3.jpg"
-                data-type="berlin"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="berlin"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3 memory-card" data-framework="istanbul">
-              <img
-                class="front-face"
-                src="assets/images/4.jpg"
-                data-type="istanbul"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="istanbul"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="london">
-              <img
-                class="front-face"
-                src="assets/images/5.jpg"
-                data-type="london"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="london"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="rome">
-              <img
-                class="front-face"
-                src="assets/images/6.jpg"
-                data-type="rome"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="rome"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="rio">
-              <img
-                class="front-face"
-                src="assets/images/7.jpg"
-                data-type="rio"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="rio"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3 memory-card" data-framework="bangkok">
-              <img
-                class="front-face"
-                src="assets/images/8.jpg"
-                data-type="bangkok"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="bangkok"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="barcelona">
-              <img
-                class="front-face"
-                src="assets/images/9.jpg"
-                data-type="barcelona"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="barcelona"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="cairo">
-              <img
-                class="front-face"
-                src="assets/images/10.jpg"
-                data-type="cairo"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="cairo"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="berlin">
-              <img
-                class="front-face"
-                src="assets/images/11.jpg"
-                data-type="berlin"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="berlin"
-              />
-            </div>
-          </div>
-          <div class="row">
-            <div class="col-3 memory-card" data-framework="istanbul">
-              <img
-                class="front-face"
-                src="assets/images/12.jpg"
-                data-type="istanbul"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="istanbul"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="london">
-              <img
-                class="front-face"
-                src="assets/images/13.jpg"
-                data-type="london"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="london"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="rio">
-              <img
-                class="front-face"
-                src="assets/images/14.jpg"
-                data-type="rio"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="rio"
-              />
-            </div>
-            <div class="col-3 memory-card" data-framework="rome">
-              <img
-                class="front-face"
-                src="assets/images/15.jpg"
-                data-type="rome"
-              />
-              <img
-                class="back-face"
-                src="assets/images/back-for-flagcard3.jpg"
-                data-type="rome"
-              />
-            </div>
-          </div>
+                    <label id="minutes" class="timer">00</label>:<label id="seconds" class="timer">00</label>
+                </p>
 
-          <div>
-            <a href="index2.html"> JUST A LINK, WILL BE REMOVED</a>
-          </div>
+            </div>
         </div>
-      </div>
-      <!-- Button trigger modal -->
 
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">Game Over</h5>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Game Over</h5>
 
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+
+                    <div class="modal-body" id="gameOver">
+                        <img src="assets/images/gameOver3.jpg" id="imgGameOver" />
+
+                        <p class="timer">
+                            Time
+
+                            <label id="endMin" class="timer">00</label>:<label id="endSec" class="timer">00</label>
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                            Close
+                        </button>
+
+                    </div>
+                </div>
             </div>
-            <div class="modal-body" id="gameOver">
-              <img src="assets/images/gameover.jpg" id="imgGameOver" />
-
-              <p class="timer">
-                Time
-
-                <label id="endMin" class="timer">00</label>:<label
-                  id="endSec"
-                  class="timer"
-                  >00</label
-                >
-              </p>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <!-- <button type="button" class="btn btn-primary">Play Again</button> -->
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- 
-      <div id="gameOver">
-        <img src="assets/images/gameover.jpg" id="imgGameOver" />
-      </div> -->
+
     </section>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"
-    ></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
 
     <script src="script.js"></script>
-  </body>
+</body>
+
 </html>
