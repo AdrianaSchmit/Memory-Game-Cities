@@ -4,7 +4,7 @@
 ## Memory Game Cities
 ---
 
-[View the live project here.](  PUT THE WEBSITE HERE/) 
+[View the live project here.]( https://adrianaschmit.github.io/Memory-Game-Cities/.) 
 
 Memory Game Cities is a website who offers one fun matching cards game  with 16 cards. It is a fun mental challenge that will test your recall abilities. Suitable for children and adults.
 
