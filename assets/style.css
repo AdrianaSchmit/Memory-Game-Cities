@@ -8,7 +8,7 @@ html {
 }
 
 body {
-  background: url("/assets/images/panel.jpg");
+  background: url("images/panel.jpg");
   background-size: cover;
   background-repeat: repeat;
   width: 100%;
