@@ -1,8 +1,8 @@
 const cards = document.querySelectorAll(".memory-card");
 
-let wasCardTurned = false;
-let stopCards = false;
-let firstCard, secondCard;
+var wasCardTurned = false;
+var stopCards = false;
+var firstCard, secondCard;
 
 
 var minutesLabel = document.getElementById("minutes");
@@ -87,7 +87,7 @@ function unturnCard() {
         secondCard.classList.remove("turn");
 
         resetBoard();
-    }, 1500);
+    }, 1000);
 }
 
 function resetBoard() {
